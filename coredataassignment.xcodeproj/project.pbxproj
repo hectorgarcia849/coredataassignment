@@ -14,6 +14,12 @@
 		34064FD71E2821F900F921D2 /* coredataassignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34064FD51E2821F900F921D2 /* coredataassignment.xcdatamodeld */; };
 		34064FD91E2821F900F921D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34064FD81E2821F900F921D2 /* Assets.xcassets */; };
 		34064FDC1E2821F900F921D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34064FDA1E2821F900F921D2 /* LaunchScreen.storyboard */; };
+		34064FEF1E28452B00F921D2 /* ChoreMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FE41E28452B00F921D2 /* ChoreMO+CoreDataProperties.m */; };
+		34064FF01E28452B00F921D2 /* ChoreMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FE61E28452B00F921D2 /* ChoreMO.m */; };
+		34064FF11E28452B00F921D2 /* PersonMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FE81E28452B00F921D2 /* PersonMO+CoreDataProperties.m */; };
+		34064FF21E28452B00F921D2 /* PersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FEA1E28452B00F921D2 /* PersonMO.m */; };
+		34064FF31E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FEC1E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.m */; };
+		34064FF41E28452B00F921D2 /* ChoreLogMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 34064FEE1E28452B00F921D2 /* ChoreLogMO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,18 @@
 		34064FD81E2821F900F921D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34064FDB1E2821F900F921D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34064FDD1E2821F900F921D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34064FE31E28452B00F921D2 /* ChoreMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChoreMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		34064FE41E28452B00F921D2 /* ChoreMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChoreMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		34064FE51E28452B00F921D2 /* ChoreMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoreMO.h; sourceTree = "<group>"; };
+		34064FE61E28452B00F921D2 /* ChoreMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoreMO.m; sourceTree = "<group>"; };
+		34064FE71E28452B00F921D2 /* PersonMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		34064FE81E28452B00F921D2 /* PersonMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersonMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		34064FE91E28452B00F921D2 /* PersonMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMO.h; sourceTree = "<group>"; };
+		34064FEA1E28452B00F921D2 /* PersonMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMO.m; sourceTree = "<group>"; };
+		34064FEB1E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChoreLogMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		34064FEC1E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChoreLogMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		34064FED1E28452B00F921D2 /* ChoreLogMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoreLogMO.h; sourceTree = "<group>"; };
+		34064FEE1E28452B00F921D2 /* ChoreLogMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoreLogMO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +62,18 @@
 		34064FBD1E2821F800F921D2 = {
 			isa = PBXGroup;
 			children = (
+				34064FE31E28452B00F921D2 /* ChoreMO+CoreDataProperties.h */,
+				34064FE41E28452B00F921D2 /* ChoreMO+CoreDataProperties.m */,
+				34064FE51E28452B00F921D2 /* ChoreMO.h */,
+				34064FE61E28452B00F921D2 /* ChoreMO.m */,
+				34064FE71E28452B00F921D2 /* PersonMO+CoreDataProperties.h */,
+				34064FE81E28452B00F921D2 /* PersonMO+CoreDataProperties.m */,
+				34064FE91E28452B00F921D2 /* PersonMO.h */,
+				34064FEA1E28452B00F921D2 /* PersonMO.m */,
+				34064FEB1E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.h */,
+				34064FEC1E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.m */,
+				34064FED1E28452B00F921D2 /* ChoreLogMO.h */,
+				34064FEE1E28452B00F921D2 /* ChoreLogMO.m */,
 				34064FC81E2821F800F921D2 /* coredataassignment */,
 				34064FC71E2821F800F921D2 /* Products */,
 			);
@@ -152,10 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34064FF21E28452B00F921D2 /* PersonMO.m in Sources */,
+				34064FF11E28452B00F921D2 /* PersonMO+CoreDataProperties.m in Sources */,
 				34064FD11E2821F800F921D2 /* ViewController.m in Sources */,
+				34064FF01E28452B00F921D2 /* ChoreMO.m in Sources */,
 				34064FCE1E2821F800F921D2 /* AppDelegate.m in Sources */,
 				34064FCB1E2821F800F921D2 /* main.m in Sources */,
 				34064FD71E2821F900F921D2 /* coredataassignment.xcdatamodeld in Sources */,
+				34064FEF1E28452B00F921D2 /* ChoreMO+CoreDataProperties.m in Sources */,
+				34064FF41E28452B00F921D2 /* ChoreLogMO.m in Sources */,
+				34064FF31E28452B00F921D2 /* ChoreLogMO+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ChoreMO.h"
+#import "PersonMO.h"
+#import "ChoreLogMO.h"
 
 @interface AppDelegate ()
 
@@ -16,33 +19,47 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //ask for model, if exists it retreives the model, else it creates a new one and retreives that
+    [self managedObjectModel];
+    
+    //ask for psc, it connects with the managedobjectmodel and connects it to the sqlite database
+    [self persistentStoreCoordinator];
+    
+    //get the managed object context, our scratchpad
+    NSManagedObjectContext *moc = [self managedObjectContext];
+    NSAssert(moc != nil, @"Unable to create Managed Object Context");
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+#pragma mark - My Managed Object Creation Code
+
+
+//adds managedobects to the managedobjects context. MOs based on ChoreEntity model, PersonEntity model, ChoreLogEntity model.  This are made publicly accessible
+- (ChoreMO *) createChoreMO {
+    //retreieve managed object context created at didFinishLaunching...
+    NSManagedObjectContext *moc = [self managedObjectContext];
+    //add new managed object based on ChoreEntity, has fields as outlined in model.
+    ChoreMO *choreMO = [NSEntityDescription insertNewObjectForEntityForName:@"ChoreEntity" inManagedObjectContext:moc];
+    return choreMO;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (PersonMO *) createPersonMO {
+    //retreieve managed object context created at didFinishLaunching...
+    NSManagedObjectContext *moc = [self managedObjectContext];
+    //add new managed object based on ChoreEntity, has fields as outlined in model.
+    PersonMO *personMO = [NSEntityDescription insertNewObjectForEntityForName:@"PersonEntity" inManagedObjectContext:moc];
+    return personMO;
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (ChoreLogMO *) createChoreLogMO {
+    //retreieve managed object context created at didFinishLaunching...
+    NSManagedObjectContext *moc = [self managedObjectContext];
+    //add new managed object based on ChoreEntity, has fields as outlined in model.
+    ChoreLogMO *choreLogMO = [NSEntityDescription insertNewObjectForEntityForName:@"ChoreLogEntity" inManagedObjectContext:moc];
+    return choreLogMO;
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
-}
 
 #pragma mark - Core Data stack
 

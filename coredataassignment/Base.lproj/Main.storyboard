@@ -1,25 +1,149 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Person" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47p-Gg-MRF">
+                                <rect key="frame" x="80" y="79" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.81960784313725488" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="1Yt-hV-kTl"/>
+                                    <constraint firstAttribute="height" constant="30" id="D00-TN-XRh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choreTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Sd4-KS-KNO"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqj-QE-vnf">
+                                <rect key="frame" x="14" y="363" width="292" height="159"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.90196078431372551" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="159" id="CJL-C3-wH5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="284" id="bDK-wx-5A7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAk-3l-eAe">
+                                <rect key="frame" x="78" y="530" width="164" height="30"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.81960784313725488" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cZg-6d-DrJ"/>
+                                </constraints>
+                                <state key="normal" title="Delete Chore"/>
+                                <connections>
+                                    <action selector="deleteChoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsR-jv-a70"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Chore" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLR-wV-IQ6">
+                                <rect key="frame" x="80" y="117" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.81960784310000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="3uY-PS-Vbb"/>
+                                    <constraint firstAttribute="height" constant="30" id="KgV-aB-ubE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T6-gP-hL6">
+                                <rect key="frame" x="80" y="272" width="230" height="30"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.81960784313725488" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="DTe-oH-aco"/>
+                                    <constraint firstAttribute="height" constant="30" id="JIO-eG-2gQ"/>
+                                </constraints>
+                                <state key="normal" title="Add Chore"/>
+                                <connections>
+                                    <action selector="addChoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ER7-f5-Sjw"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-Rc-Pz3">
+                                <rect key="frame" x="76" y="155" width="238" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="9HI-ix-Ht2"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="505976521.25055301">
+                                    <!--2017-01-13 05:02:01 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="finishedPickingDate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eDx-fj-ewC"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M8-RM-Wm1">
+                                <rect key="frame" x="267" y="33" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Elements in Core Data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1S-Fp-gy6">
+                                <rect key="frame" x="12" y="33" width="217" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="UxP-6H-kxp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.96862745098039216" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DLR-wV-IQ6" firstAttribute="top" secondItem="47p-Gg-MRF" secondAttribute="bottom" constant="8" id="2L7-Dk-IDt"/>
+                            <constraint firstItem="0T6-gP-hL6" firstAttribute="top" secondItem="YVh-Rc-Pz3" secondAttribute="bottom" constant="8" id="2hb-3z-YN5"/>
+                            <constraint firstItem="47p-Gg-MRF" firstAttribute="top" secondItem="F1S-Fp-gy6" secondAttribute="bottom" constant="25" id="3gY-Rv-e22"/>
+                            <constraint firstItem="rAk-3l-eAe" firstAttribute="top" secondItem="Zqj-QE-vnf" secondAttribute="bottom" constant="8" id="4Ed-zi-Pne"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YVh-Rc-Pz3" secondAttribute="trailing" constant="-10" id="5hl-0A-UW5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0T6-gP-hL6" secondAttribute="trailing" constant="-6" id="7Pr-XB-ttJ"/>
+                            <constraint firstItem="F1S-Fp-gy6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="CLs-iJ-4Am"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zqj-QE-vnf" secondAttribute="trailing" constant="-2" id="DGF-F0-6ko"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="47p-Gg-MRF" secondAttribute="trailing" constant="-6" id="TAG-UP-smP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rAk-3l-eAe" secondAttribute="bottom" constant="8" id="UbN-qe-iAA"/>
+                            <constraint firstItem="F1S-Fp-gy6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="VEf-gK-QWo"/>
+                            <constraint firstItem="0M8-RM-Wm1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="F1S-Fp-gy6" secondAttribute="trailing" constant="38" id="cOJ-mU-FMX"/>
+                            <constraint firstItem="0T6-gP-hL6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="cdo-Yf-ayX"/>
+                            <constraint firstItem="0M8-RM-Wm1" firstAttribute="centerY" secondItem="F1S-Fp-gy6" secondAttribute="centerY" id="ckl-0x-RcS"/>
+                            <constraint firstItem="YVh-Rc-Pz3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="cuz-0c-eeC"/>
+                            <constraint firstItem="0M8-RM-Wm1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fTm-fG-5mt"/>
+                            <constraint firstItem="47p-Gg-MRF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="g2o-Nq-7Fr"/>
+                            <constraint firstItem="Zqj-QE-vnf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="hyu-vK-2VL"/>
+                            <constraint firstItem="DLR-wV-IQ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="k1N-c5-Liw"/>
+                            <constraint firstItem="47p-Gg-MRF" firstAttribute="top" secondItem="0M8-RM-Wm1" secondAttribute="bottom" constant="25" id="k7f-5t-pcz"/>
+                            <constraint firstItem="rAk-3l-eAe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="kd3-tG-xvp"/>
+                            <constraint firstItem="Zqj-QE-vnf" firstAttribute="top" secondItem="0T6-gP-hL6" secondAttribute="bottom" constant="61" id="pfh-Y8-2nM"/>
+                            <constraint firstItem="0M8-RM-Wm1" firstAttribute="height" secondItem="F1S-Fp-gy6" secondAttribute="height" id="qgl-8n-z19"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rAk-3l-eAe" secondAttribute="trailing" constant="62" id="qoP-Ld-CBT"/>
+                            <constraint firstItem="YVh-Rc-Pz3" firstAttribute="top" secondItem="DLR-wV-IQ6" secondAttribute="bottom" constant="8" id="vco-I3-r5x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DLR-wV-IQ6" secondAttribute="trailing" constant="-6" id="zNm-1M-1Xy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choreTextField" destination="DLR-wV-IQ6" id="f0J-yw-8Zv"/>
+                        <outlet property="datePicker" destination="YVh-Rc-Pz3" id="duv-Tg-j0p"/>
+                        <outlet property="numLabel" destination="0M8-RM-Wm1" id="cmX-wG-PKc"/>
+                        <outlet property="persistedData" destination="Zqj-QE-vnf" id="JaS-ML-GTR"/>
+                        <outlet property="personTextField" destination="47p-Gg-MRF" id="TfH-aR-mPm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="406"/>
         </scene>
     </scenes>
 </document>
